@@ -11,132 +11,141 @@
 </head>
 <body>
   <header class="site-header" id="siteHeader">
-    <div class="announce">FREE SHIPPING ON ORDERS OVER $25</div>
-    <div class="bar">
-      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <a class="logo" href="#top">
-        <span class="logo-word">GRIPSTIC<sup>®</sup></span>
-        <span class="logo-tag">products for living, products for life.<sup>™</sup></span>
-      </a>
-      <form class="search" id="searchForm" role="search">
-        <div class="search-cat">
-          <button class="cat-btn" id="catBtn" type="button" aria-expanded="false">
-            <span id="catLabel">All categories</span>
-            <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
-          </button>
-          <ul class="cat-menu" id="catMenu" hidden>
-            <li>All categories</li>
-            <li>GRIPSTIC</li>
-            <li>GRIPSTIC Fresh</li>
-            <li>Steam + Store</li>
-            <li>Tools + Gadgets</li>
-            <li>Outdoor + Pet</li>
-            <li>GRIPSTIC Clean</li>
-            <li>Used by Humans</li>
-          </ul>
-        </div>
-        <input type="search" id="searchInput" placeholder="Search" aria-label="Search" />
-        <button class="search-go" type="submit" aria-label="Search">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </button>
-      </form>
-      <div class="account">
-        <a class="login" href="#login">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5.5 19.2c1.4-2.8 3.7-4.2 6.5-4.2s5.1 1.4 6.5 4.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-          LOGIN
+    <div class="promo-row">
+      <span class="promo-bar">FREE SHIPPING ON ORDERS OVER $25</span>
+      <div class="header-tools">
+        <label class="search-wrap" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M16 16L21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <input type="search" placeholder="What are you looking for?" aria-label="What are you looking for?" />
+        </label>
+
+        <a class="header-link" href="#login" aria-label="Login">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M5.5 19a6.5 6.5 0 0 1 13 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span>Login</span>
         </a>
-        <a class="cart" href="#cart" aria-label="Cart">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h15l-1.6 8.2a2 2 0 0 1-2 1.6H9.2a2 2 0 0 1-2-1.5L5 4H2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.3" fill="currentColor"/><circle cx="17" cy="20" r="1.3" fill="currentColor"/></svg>
+
+        <a class="header-link" href="#cart" aria-label="Cart">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 8h10l-1 11H8L7 8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M9.5 8V6.8A2.5 2.5 0 0 1 12 4.3a2.5 2.5 0 0 1 2.5 2.5V8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span>Cart</span>
         </a>
       </div>
     </div>
-    <nav class="nav" id="mainNav">
-      <a href="#shop">Shop All</a>
-      <a href="#fresh">GRIPSTIC Fresh</a>
-      <a href="#steam">Steam + Store</a>
-      <a href="#tools">Tools + Gadgets</a>
-      <a href="#outdoor">Outdoor + Pet</a>
-      <a href="#clean">GRIPSTIC Clean</a>
-      <a href="#humans">Used by Humans</a>
-      <a href="#resources">Resources</a>
-    </nav>
+
+    <div class="top-bar">
+      <nav class="nav-left" aria-label="Shop navigation">
+        <a href="#">Shop All</a>
+        <a href="#">Gripstic Fresh</a>
+        <a href="#">Steam + Store</a>
+        <a href="#">Tools + Gadgets</a>
+      </nav>
+
+      <a href="#" class="brand-mark" aria-label="Gripstic home">GRIPSTIC</a>
+
+      <nav class="nav-center-right" aria-label="More navigation">
+        <a href="#">Outdoor + Pet</a>
+        <a href="#">Gripstic Clean</a>
+        <a href="#">Used by Humans</a>
+        <a href="#">Resources</a>
+      </nav>
+    </div>
   </header>
+
   <main id="top">
-    <section class="hero">
-      <div class="hero-media">
-        <video id="heroVideo" autoplay muted loop playsinline>
-          <source src="hero.mp4" type="video/mp4" />
-        </video>
+    <section class="hero" aria-label="Featured collection">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <h1>Say hello to your<br />new everyday essential</h1>
+        <p>Smart, sleek essentials designed to keep up with your life — from workouts to weekends.</p>
+
+        <div class="hero-actions">
+          <button class="primary-btn" type="button">Shop the collection</button>
+          <button class="secondary-btn" type="button">Shop new in</button>
+        </div>
       </div>
-      <div class="hero-copy">
-        <h1>say hello to your new<br />best friend</h1>
-        <a class="cta" href="#shop">shop GRIPSTIC now</a>
+
+      <div class="hero-controls" aria-label="Hero navigation">
+        <button class="circle-button" type="button" aria-label="Pause slideshow">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8 6v12M16 6v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div class="control-dots" aria-hidden="true">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+        </div>
       </div>
     </section>
     <section class="brands" aria-labelledby="brandsTitle">
-      <div class="brands-orbit brands-orbit-one brand-parallax" data-parallax-speed="0.16" aria-hidden="true"></div>
-      <div class="brands-orbit brands-orbit-two brand-parallax" data-parallax-speed="-0.12" aria-hidden="true"></div>
-      <div class="brands-spark brands-spark-one brand-parallax" data-parallax-speed="0.22" aria-hidden="true">✳</div>
-      <div class="brands-spark brands-spark-two brand-parallax" data-parallax-speed="-0.18" aria-hidden="true">✳</div>
       <div class="brands-heading">
         <span class="brands-eyebrow">A little something for everyone</span>
         <h2 id="brandsTitle">Brands you'll love<span>.</span></h2>
         <p>Thoughtful tools for all the ways you live.</p>
       </div>
-      <div class="brands-grid">
-        <div class="brand-logo brand-parallax" data-parallax-speed="0.22" data-parallax-x="0.07" style="--rest-y: 12px">
-          <img src="1logosection.avif" alt="GRIPSTIC Fresh" />
-        </div>
-        <div class="brand-logo brand-parallax" data-parallax-speed="-0.15" data-parallax-x="-0.05" style="--rest-y: -8px">
-          <img src="2sectionlogo.webp" alt="GRIPSTIC Tools + Gadgets" />
-        </div>
-        <div class="brand-logo brand-parallax" data-parallax-speed="0.18" data-parallax-x="0.06" style="--rest-y: 16px">
-          <img src="3sectionlogo.avif" alt="GRIPSTIC Clean" />
-        </div>
-        <div class="brand-logo brand-parallax" data-parallax-speed="-0.2" data-parallax-x="-0.06" style="--rest-y: -16px">
-          <img src="4sectionlogo.avif" alt="GRIPSTIC Steam + Store" />
-        </div>
-        <div class="brand-logo brand-parallax" data-parallax-speed="0.16" data-parallax-x="0.05" style="--rest-y: 10px">
-          <img src="5sectionlogo.avif" alt="GRIPSTIC Outdoor + Pet" />
-        </div>
-        <div class="brand-logo brand-parallax" data-parallax-speed="-0.23" data-parallax-x="-0.07" style="--rest-y: -12px">
-          <img src="six sectionlogo.avif" alt="Used by Humans" />
+      <div class="brands-marquee">
+        <div class="brands-track">
+          <div class="brands-group">
+            <div class="brand-logo"><img src="1logosection.avif" alt="GRIPSTIC Fresh" /></div>
+            <div class="brand-logo"><img src="2sectionlogo.webp" alt="GRIPSTIC Tools + Gadgets" /></div>
+            <div class="brand-logo"><img src="3sectionlogo.avif" alt="GRIPSTIC Clean" /></div>
+            <div class="brand-logo"><img src="4sectionlogo.avif" alt="GRIPSTIC Steam + Store" /></div>
+            <div class="brand-logo"><img src="5sectionlogo.avif" alt="GRIPSTIC Outdoor + Pet" /></div>
+            <div class="brand-logo"><img src="six sectionlogo.avif" alt="Used by Humans" /></div>
+          </div>
+          <div class="brands-group" aria-hidden="true">
+            <div class="brand-logo"><img src="1logosection.avif" alt="" /></div>
+            <div class="brand-logo"><img src="2sectionlogo.webp" alt="" /></div>
+            <div class="brand-logo"><img src="3sectionlogo.avif" alt="" /></div>
+            <div class="brand-logo"><img src="4sectionlogo.avif" alt="" /></div>
+            <div class="brand-logo"><img src="5sectionlogo.avif" alt="" /></div>
+            <div class="brand-logo"><img src="six sectionlogo.avif" alt="" /></div>
+          </div>
         </div>
       </div>
     </section>
 
 
     <section class="collections" id="collections" aria-labelledby="collections-title">
-  <div class="collections-head">
-    <p class="eyebrow">The lineup</p>
-    <h2 id="collections-title">Four ways to seal, store, and scrub</h2>
-    <p>Same Gripstic idea, four jobs. Pick a lane.</p>
-  </div>
+      <div class="collections-head">
+        <p class="eyebrow">The lineup</p>
+        <h2 id="collections-title">Four ways to seal, store, and scrub</h2>
+        <p>Same Gripstic idea, four jobs. Pick a lane.</p>
+      </div>
 
-  <div class="bento">
-    <article class="tile tile-feature">
-      <img src="img-01.webp" alt="Gripstic clips sealing chip, cereal, salad, and coffee bags" />
-      <a class="shop" href="https://www.gripstic.com/collections/frontpage">Shop now</a>
-    </article>
+      <div class="bento">
+        <article class="tile tile-feature">
+          <img src="img-01.webp" alt="Gripstic clips sealing chip, cereal, salad, and coffee bags" />
+          <a class="shop" href="https://www.gripstic.com/collections/frontpage">Shop now</a>
+        </article>
 
-    <article class="tile">
-      <img src="img-02.webp" alt="Reusable silicone steam and store bags" />
-      <a class="shop" href="https://www.gripstic.com/collections/frontpage">Shop now</a>
-    </article>
+        <article class="tile">
+          <img src="img-02.webp" alt="Reusable silicone steam and store bags" />
+          <a class="shop" href="https://www.gripstic.com/collections/frontpage">Shop now</a>
+        </article>
 
-    <article class="tile">
-      <img src="img-03.webp" alt="Outdoor and pet storage bags" />
-      <a class="shop" href="https://www.gripstic.com/collections/frontpage">Shop now</a>
-    </article>
+        <article class="tile">
+          <img src="img-03.webp" alt="Outdoor and pet storage bags" />
+          <a class="shop" href="https://www.gripstic.com/collections/frontpage">Shop now</a>
+        </article>
 
-    <article class="tile tile-wide">
-      <img src="img-04.webp" alt="Black scrubbing sponge in soapy water" />
-      <a class="shop" href="https://www.gripstic.com/collections/frontpage">Shop now</a>
-    </article>
-  </div>
-</section>
+        <article class="tile tile-wide">
+          <img src="img-04.webp" alt="Black scrubbing sponge in soapy water" />
+          <a class="shop" href="https://www.gripstic.com/collections/frontpage">Shop now</a>
+        </article>
+      </div>
+    </section>
 
 
 <section class="marquee-products" aria-label="Bag sealer sets">

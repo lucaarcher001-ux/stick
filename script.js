@@ -9,25 +9,26 @@ const searchInput = document.getElementById("searchInput");
 const toast = document.getElementById("toast");
 
 function showToast(message) {
+  if (!toast) return;
   toast.textContent = message;
   toast.classList.add("show");
   clearTimeout(showToast._t);
   showToast._t = setTimeout(() => toast.classList.remove("show"), 2200);
 }
 
-menuToggle.addEventListener("click", () => {
+if (menuToggle && mainNav && searchForm) menuToggle.addEventListener("click", () => {
   const open = mainNav.classList.toggle("open");
   menuToggle.setAttribute("aria-expanded", String(open));
   searchForm.classList.toggle("open", open);
 });
 
-catBtn.addEventListener("click", () => {
+if (catBtn && catMenu) catBtn.addEventListener("click", () => {
   const open = catMenu.hasAttribute("hidden");
   catMenu.toggleAttribute("hidden", !open);
   catBtn.setAttribute("aria-expanded", String(open));
 });
 
-catMenu.addEventListener("click", (event) => {
+if (catMenu && catLabel) catMenu.addEventListener("click", (event) => {
   const item = event.target.closest("li");
   if (!item) return;
   catLabel.textContent = item.textContent;
@@ -35,30 +36,32 @@ catMenu.addEventListener("click", (event) => {
   catBtn.setAttribute("aria-expanded", "false");
 });
 
-document.addEventListener("click", (event) => {
+if (catMenu && catBtn) document.addEventListener("click", (event) => {
   if (!event.target.closest(".search-cat")) {
     catMenu.hidden = true;
     catBtn.setAttribute("aria-expanded", "false");
   }
 });
 
-searchForm.addEventListener("submit", (event) => {
+if (searchForm && searchInput && catLabel) searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const q = searchInput.value.trim();
   showToast(q ? "Search “" + q + "” in " + catLabel.textContent : "Type something to search");
 });
 
-document.querySelector(".login").addEventListener("click", (event) => {
+const loginLink = document.querySelector('.header-link[href="#login"]');
+if (loginLink) loginLink.addEventListener("click", (event) => {
   event.preventDefault();
   showToast("Login opens on the live store");
 });
 
-document.querySelector(".cart").addEventListener("click", (event) => {
+const cartLink = document.querySelector('.header-link[href="#cart"]');
+if (cartLink) cartLink.addEventListener("click", (event) => {
   event.preventDefault();
   showToast("Your cart is empty");
 });
 
-window.addEventListener("scroll", () => {
+if (header) window.addEventListener("scroll", () => {
   header.style.boxShadow = window.scrollY > 4 ? "0 2px 10px rgba(0,0,0,.08)" : "none";
 }, { passive: true });
 
@@ -97,6 +100,58 @@ window.addEventListener("resize", updateBrandParallax);
 reduceMotion.addEventListener("change", updateBrandParallax);
 updateBrandParallax();
 
+function buildContinuousMarquee(track, viewport) {
+  if (!track || !viewport) return;
+
+  const firstGroup = track.querySelector(".brands-group");
+  const source = track.dataset.marqueeSource || (firstGroup ? firstGroup.innerHTML : track.innerHTML);
+  track.dataset.marqueeSource = source;
+  track.replaceChildren();
+  track.style.removeProperty("transform");
+  track.classList.remove("is-paused");
+
+  const template = document.createElement("template");
+  template.innerHTML = source;
+  const items = Array.from(template.content.children);
+  if (!items.length) return;
+
+  const group = document.createElement("div");
+  group.className = "marquee-group";
+  group.append(template.content.cloneNode(true));
+  track.append(group);
+
+  while (group.getBoundingClientRect().width < viewport.clientWidth) {
+    const repeatedSet = template.content.cloneNode(true);
+    Array.from(repeatedSet.children).forEach((item) => {
+      item.setAttribute("aria-hidden", "true");
+      item.inert = true;
+    });
+    group.append(repeatedSet);
+  }
+
+  const duplicate = group.cloneNode(true);
+  duplicate.setAttribute("aria-hidden", "true");
+  duplicate.inert = true;
+  track.append(duplicate);
+}
+
+function refreshContinuousMarquees() {
+  document.querySelectorAll(".brands-track").forEach((track) => {
+    buildContinuousMarquee(track, track.closest(".brands-marquee"));
+  });
+
+  document.querySelectorAll(".marquee-track").forEach((track) => {
+    buildContinuousMarquee(track, track.closest(".marquee-viewport"));
+  });
+}
+
+refreshContinuousMarquees();
+let marqueeResizeFrame = 0;
+window.addEventListener("resize", () => {
+  window.cancelAnimationFrame(marqueeResizeFrame);
+  marqueeResizeFrame = window.requestAnimationFrame(refreshContinuousMarquees);
+}, { passive: true });
+
 const footerNewsletter = document.getElementById("footerNewsletter");
 if (footerNewsletter) {
   footerNewsletter.addEventListener("submit", (event) => {
@@ -131,10 +186,7 @@ if (backToTop) {
   var note = document.getElementById("marqueeNote");
   if (!track) return;
 
-  track.innerHTML += track.innerHTML;
-
   var offset = 0;
-  var manual = false;
 
   function cardStep() {
     var card = track.querySelector(".product-card");
@@ -143,7 +195,6 @@ if (backToTop) {
   }
 
   function nudge(direction) {
-    manual = true;
     track.classList.add("is-paused");
     offset += direction * cardStep();
     track.style.transform = "translateX(" + offset + "px)";
