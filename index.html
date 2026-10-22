@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GRIPSTIC — say hello to your new best friend</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="announce">FREE SHIPPING ON ORDERS OVER $25</div>
+    <div class="bar">
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="logo" href="#top">
+        <span class="logo-word">GRIPSTIC<sup>®</sup></span>
+        <span class="logo-tag">products for living, products for life.<sup>™</sup></span>
+      </a>
+      <form class="search" id="searchForm" role="search">
+        <div class="search-cat">
+          <button class="cat-btn" id="catBtn" type="button" aria-expanded="false">
+            <span id="catLabel">All categories</span>
+            <svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          </button>
+          <ul class="cat-menu" id="catMenu" hidden>
+            <li>All categories</li>
+            <li>GRIPSTIC</li>
+            <li>GRIPSTIC Fresh</li>
+            <li>Steam + Store</li>
+            <li>Tools + Gadgets</li>
+            <li>Outdoor + Pet</li>
+            <li>GRIPSTIC Clean</li>
+            <li>Used by Humans</li>
+          </ul>
+        </div>
+        <input type="search" id="searchInput" placeholder="Search" aria-label="Search" />
+        <button class="search-go" type="submit" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </form>
+      <div class="account">
+        <a class="login" href="#login">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5.5 19.2c1.4-2.8 3.7-4.2 6.5-4.2s5.1 1.4 6.5 4.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          LOGIN
+        </a>
+        <a class="cart" href="#cart" aria-label="Cart">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h15l-1.6 8.2a2 2 0 0 1-2 1.6H9.2a2 2 0 0 1-2-1.5L5 4H2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.3" fill="currentColor"/><circle cx="17" cy="20" r="1.3" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+    <nav class="nav" id="mainNav">
+      <a href="#shop">Shop All</a>
+      <a href="#fresh">GRIPSTIC Fresh</a>
+      <a href="#steam">Steam + Store</a>
+      <a href="#tools">Tools + Gadgets</a>
+      <a href="#outdoor">Outdoor + Pet</a>
+      <a href="#clean">GRIPSTIC Clean</a>
+      <a href="#humans">Used by Humans</a>
+      <a href="#resources">Resources</a>
+    </nav>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-media">
+        <video id="heroVideo" autoplay muted loop playsinline>
+          <source src="hero.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="hero-copy">
+        <h1>say hello to your new<br />best friend</h1>
+        <a class="cta" href="#shop">shop GRIPSTIC now</a>
+      </div>
+    </section>
+    <section class="brands" aria-labelledby="brandsTitle">
+      <div class="brands-orbit brands-orbit-one brand-parallax" data-parallax-speed="0.16" aria-hidden="true"></div>
+      <div class="brands-orbit brands-orbit-two brand-parallax" data-parallax-speed="-0.12" aria-hidden="true"></div>
+      <div class="brands-spark brands-spark-one brand-parallax" data-parallax-speed="0.22" aria-hidden="true">✳</div>
+      <div class="brands-spark brands-spark-two brand-parallax" data-parallax-speed="-0.18" aria-hidden="true">✳</div>
+      <div class="brands-heading">
+        <span class="brands-eyebrow">A little something for everyone</span>
+        <h2 id="brandsTitle">Brands you'll love<span>.</span></h2>
+        <p>Thoughtful tools for all the ways you live.</p>
+      </div>
+      <div class="brands-grid">
+        <div class="brand-logo brand-parallax" data-parallax-speed="0.22" data-parallax-x="0.07" style="--rest-y: 12px">
+          <img src="1logosection.avif" alt="GRIPSTIC Fresh" />
+        </div>
+        <div class="brand-logo brand-parallax" data-parallax-speed="-0.15" data-parallax-x="-0.05" style="--rest-y: -8px">
+          <img src="2sectionlogo.webp" alt="GRIPSTIC Tools + Gadgets" />
+        </div>
+        <div class="brand-logo brand-parallax" data-parallax-speed="0.18" data-parallax-x="0.06" style="--rest-y: 16px">
+          <img src="3sectionlogo.avif" alt="GRIPSTIC Clean" />
+        </div>
+        <div class="brand-logo brand-parallax" data-parallax-speed="-0.2" data-parallax-x="-0.06" style="--rest-y: -16px">
+          <img src="4sectionlogo.avif" alt="GRIPSTIC Steam + Store" />
+        </div>
+        <div class="brand-logo brand-parallax" data-parallax-speed="0.16" data-parallax-x="0.05" style="--rest-y: 10px">
+          <img src="5sectionlogo.avif" alt="GRIPSTIC Outdoor + Pet" />
+        </div>
+        <div class="brand-logo brand-parallax" data-parallax-speed="-0.23" data-parallax-x="-0.07" style="--rest-y: -12px">
+          <img src="six sectionlogo.avif" alt="Used by Humans" />
+        </div>
+      </div>
+    </section>
+
+
+    <section class="collections" id="collections" aria-labelledby="collections-title">
+  <div class="collections-head">
+    <p class="eyebrow">The lineup</p>
+    <h2 id="collections-title">Four ways to seal, store, and scrub</h2>
+    <p>Same Gripstic idea, four jobs. Pick a lane.</p>
+  </div>
+
+  <div class="bento">
+    <article class="tile tile-feature">
+      <img src="img-01.webp" alt="Gripstic clips sealing chip, cereal, salad, and coffee bags" />
+      <a class="shop" href="https://www.gripstic.com/collections/frontpage">Shop now</a>
+    </article>
+
+    <article class="tile">
+      <img src="img-02.webp" alt="Reusable silicone steam and store bags" />
+      <a class="shop" href="https://www.gripstic.com/collections/frontpage">Shop now</a>
+    </article>
+
+    <article class="tile">
+      <img src="img-03.webp" alt="Outdoor and pet storage bags" />
+      <a class="shop" href="https://www.gripstic.com/collections/frontpage">Shop now</a>
+    </article>
+
+    <article class="tile tile-wide">
+      <img src="img-04.webp" alt="Black scrubbing sponge in soapy water" />
+      <a class="shop" href="https://www.gripstic.com/collections/frontpage">Shop now</a>
+    </article>
+  </div>
+</section>
+
+
+<section class="marquee-products" aria-label="Bag sealer sets">
+  <div class="marquee-viewport">
+    <button class="marquee-arrow prev" type="button" aria-label="Previous">‹</button>
+    <button class="marquee-arrow next" type="button" aria-label="Next">›</button>
+
+    <div class="marquee-track" id="marqueeTrack">
+      <article class="product-card">
+        <img src="maruqeimage1.avif" alt="GRIPSTIC Bag Sealer 12-Pack X-Large Set" />
+        <h3>GRIPSTIC® Bag Sealer 12-Pack X-Large Set</h3>
+        <p class="price">$24.95</p>
+        <p class="reviews"><span aria-hidden="true">★★★★★</span> 245 Reviews</p>
+        <div class="actions">
+          <button type="button" data-action="quick">Quick shop</button>
+          <button type="button" data-action="cart">Add to cart</button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img src="marqueimage2.avif" alt="GRIPSTIC Bag Sealer 12-Pack Large Set" />
+        <h3>GRIPSTIC® Bag Sealer 12-Pack Large Set</h3>
+        <p class="price">$24.95</p>
+        <p class="reviews"><span aria-hidden="true">★★★★★</span> 354 Reviews</p>
+        <div class="actions">
+          <button type="button" data-action="quick">Quick shop</button>
+          <button type="button" data-action="cart">Add to cart</button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img src="marqueimage3.avif" alt="GRIPSTIC Bag Sealer 12-Pack Medium Set" />
+        <h3>GRIPSTIC® Bag Sealer 12-Pack Medium Set</h3>
+        <p class="price">$24.95</p>
+        <p class="reviews"><span aria-hidden="true">★★★★★</span> 249 Reviews</p>
+        <div class="actions">
+          <button type="button" data-action="quick">Quick shop</button>
+          <button type="button" data-action="cart">Add to cart</button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img src="marqueimage4.avif" alt="GRIPSTIC Bag Sealer 12-Pack Small Set" />
+        <h3>GRIPSTIC® Bag Sealer 12-Pack Small Set</h3>
+        <p class="price">$24.95</p>
+        <p class="reviews"><span aria-hidden="true">★★★★★</span> 128 Reviews</p>
+        <div class="actions">
+          <button type="button" data-action="quick">Quick shop</button>
+          <button type="button" data-action="cart">Add to cart</button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img src="marqueimage5.avif" alt="GRIPSTIC Bag Sealer 12pk 5 inch Blue" />
+        <h3>GRIPSTIC® Bag Sealer 12pk 5" Blue</h3>
+        <p class="price">$24.95</p>
+        <p class="reviews"><span aria-hidden="true">★★★★★</span> 96 Reviews</p>
+        <div class="actions">
+          <button type="button" data-action="quick">Quick shop</button>
+          <button type="button" data-action="cart">Add to cart</button>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img src="marqueimage6.avif" alt="GRIPSTIC Bag Sealer 12-Pack Assorted Set" />
+        <h3>GRIPSTIC® Bag Sealer 12-Pack Assorted Set</h3>
+        <p class="price">$24.95</p>
+        <p class="reviews"><span aria-hidden="true">★★★★★</span> 410 Reviews</p>
+        <div class="actions">
+          <button type="button" data-action="quick">Quick shop</button>
+          <button type="button" data-action="cart">Add to cart</button>
+        </div>
+      </article>
+    </div>
+  </div>
+  <p class="marquee-note" id="marqueeNote" role="status"></p>
+</section>
+
+<section class="ship-reviews">
+  <div class="ship-pane">
+    <img src="freedelivery.jpg" alt="Free shipping on orders of $25 or more" />
+  </div>
+
+  <div class="review-pane">
+    <div class="review-bar">
+      <h2>What people are saying</h2>
+      <div class="review-controls">
+        <span>562 Reviews</span>
+        <button type="button" id="reviewPrev" aria-label="Previous reviews">‹</button>
+        <button type="button" id="reviewNext" aria-label="Next reviews">›</button>
+      </div>
+    </div>
+
+    <div class="review-window">
+      <div class="review-track" id="reviewTrack">
+        <article class="review">
+          <p class="stars">★★★★★ <time>11/13/25</time></p>
+          <h3>My Gripstic order arrived a day early</h3>
+          <p>Arrived sooner than expected. What a nice surprise.</p>
+          <p class="who">Mary R.</p>
+        </article>
+        <article class="review">
+          <p class="stars">★★★★★ <time>10/29/25</time></p>
+          <h3>Team members are wonderful</h3>
+          <p>Helpful when ordering by phone. Thank you.</p>
+          <p class="who">Violet M.</p>
+        </article>
+        <article class="review">
+          <p class="stars">★★★★★ <time>10/10/25</time></p>
+          <h3>Gripstic team communicated very well</h3>
+          <p>They arrived on time, just when they said they would.</p>
+          <p class="who">Bakorider</p>
+        </article>
+        <article class="review">
+          <p class="stars">★★★★★ <time>09/22/25</time></p>
+          <h3>Better than every chip clip I own</h3>
+          <p>The bag stays shut. Chips were still crisp a week later.</p>
+          <p class="who">Daniel K.</p>
+        </article>
+        <article class="review">
+          <p class="stars">★★★★★ <time>09/02/25</time></p>
+          <h3>Freezer bags finally stay sealed</h3>
+          <p>No more freezer burn on the vegetables. Simple and strong.</p>
+          <p class="who">Priya S.</p>
+        </article>
+        <article class="review">
+          <p class="stars">★★★★★ <time>08/18/25</time></p>
+          <h3>I bought a second set</h3>
+          <p>One for the pantry, one for the boat. Worth it.</p>
+          <p class="who">Ellen J.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="footer-main">
+      <section class="footer-column footer-social" aria-labelledby="footerSocialTitle">
+        <h2 id="footerSocialTitle">Follow us</h2>
+        <div class="social-links" aria-label="Social media">
+          <span aria-label="Facebook" title="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.3H7.7V13h2.7v8h3.1z"/></svg>
+          </span>
+          <span aria-label="Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.8" r="1.1"/></svg>
+          </span>
+          <span aria-label="Pinterest" title="Pinterest">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-3.3 17.4c0-.7 0-1.5.2-2.2l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.5 1.9-2.5.9 0 1.3.7 1.3 1.5 0 .9-.6 2.2-.9 3.4-.3 1 .5 1.8 1.5 1.8 1.8 0 3-2.3 3-5.1 0-2.1-1.4-3.7-3.9-3.7-2.8 0-4.6 2.1-4.6 4.4 0 .8.2 1.4.6 1.9.2.2.2.3.1.6l-.2.7c-.1.2-.2.3-.5.2-1.3-.5-1.9-1.9-1.9-3.5 0-2.6 2.2-5.8 6.7-5.8 3.6 0 6 2.6 6 5.4 0 3.7-2 6.4-5 6.4-1 0-2-.6-2.4-1.2l-.7 2.7c-.2.8-.7 1.5-1 2.1A9 9 0 1 0 12 3z"/></svg>
+          </span>
+          <span aria-label="X" title="X">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 3H21l-6.9 7.9L22.2 21h-6.3L11 14.8 5.6 21H3.4l7.4-8.5L2.9 3h6.5l4.5 5.9L18.9 3zm-1.1 16h1.2L8.1 4.9H6.8L17.8 19z"/></svg>
+          </span>
+          <span aria-label="YouTube" title="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.8 2.8 0 0 0-2-2C17.9 4.7 12 4.7 12 4.7s-5.9 0-7.6.5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2 12a29 29 0 0 0 .4 4.8 2.8 2.8 0 0 0 2 2c1.7.5 7.6.5 7.6.5s5.9 0 7.6-.5a2.8 2.8 0 0 0 2-2A29 29 0 0 0 22 12a29 29 0 0 0-.4-4.8zM10 15.1V8.9l5.2 3.1-5.2 3.1z"/></svg>
+          </span>
+        </div>
+      </section>
+
+      <nav class="footer-column" aria-labelledby="footerCatalogTitle">
+        <h2 id="footerCatalogTitle">Catalog</h2>
+        <a href="#collections">GRIPSTIC Fresh</a>
+        <a href="#collections">Cleaning Sponge</a>
+        <a href="#collections">Tools + Gadgets</a>
+        <a href="#collections">Outdoor + Pet</a>
+        <a href="#collections">Clean</a>
+        <a href="#collections">Steam + Store</a>
+      </nav>
+
+      <nav class="footer-column" aria-labelledby="footerHowTitle">
+        <h2 id="footerHowTitle">How to use</h2>
+        <a href="#collections">GRIPSTIC</a>
+        <a href="#collections">SnapBags</a>
+        <a href="#collections">Replace Brackets</a>
+      </nav>
+
+      <nav class="footer-column" aria-labelledby="footerMenuTitle">
+        <h2 id="footerMenuTitle">Footer menu</h2>
+        <a href="#top">Search</a>
+        <a href="#top">About us</a>
+      </nav>
+
+      <section class="footer-column footer-newsletter" aria-labelledby="newsletterTitle">
+        <h2 id="newsletterTitle">Mailing list</h2>
+        <p>Sign up to receive the latest information from GRIPSTIC.</p>
+        <form id="footerNewsletter">
+          <label class="visually-hidden" for="footerEmail">Email address</label>
+          <input id="footerEmail" name="email" type="email" placeholder="Email address" autocomplete="email" required />
+          <button type="submit">Sign up</button>
+        </form>
+      </section>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">Copyright © 2026 GRIPSTIC. All Rights Reserved</p>
+      <div class="payment-methods" aria-label="Accepted payment methods">
+        <img src="download (8).svg" alt="American Express" />
+        <img src="download (7).svg" alt="Apple Pay" />
+        <img src="download (5).svg" alt="Diners Club" />
+        <img src="download (4).svg" alt="Discover" />
+        <img src="download (3).svg" alt="Mastercard" />
+        <img src="download (2).svg" alt="PayPal" />
+        <img src="download (1).svg" alt="Shop Pay" />
+        <img src="download.svg" alt="Visa" />
+      </div>
+    </div>
+    <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+  </footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
