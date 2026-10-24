@@ -160,12 +160,6 @@ if (footerNewsletter) {
   });
 }
 
-const backToTop = document.querySelector(".back-to-top");
-if (backToTop) {
-  backToTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: reduceMotion.matches ? "auto" : "smooth" });
-  });
-}
 
 (function () {
   var root = document.querySelector(".collections");
